@@ -8,7 +8,7 @@ RUNNING = "running"
 STOPPED = "stopped"
 
 
-def start_ec2():
+def start_stopped_ec2_instances():
     ec2_describe_instances = get_ec2_describe_instances()
     stopped_ec2_intance_ids = filter_state_name_from_ec2_intances(
         ec2_describe_instances=ec2_describe_instances, state_name=STOPPED
@@ -16,7 +16,7 @@ def start_ec2():
     ec2_client.start_instances(InstanceIds=stopped_ec2_intance_ids)
 
 
-def stop_ec2():
+def stop_running_ec2_instances():
     ec2_describe_instances = get_ec2_describe_instances()
     running_ec2_intance_ids = filter_state_name_from_ec2_intances(
         ec2_describe_instances=ec2_describe_instances, state_name=RUNNING

@@ -10,9 +10,9 @@ def test_ok_get_ec2_describe_instances(create_ec2_instance):
     assert instance_image_id == EXAMPLE_AMI_ID
 
 
-def test_filter_state_name_from_ec2_intances():
+def test_ok_filter_state_name_from_ec2_intances():
     pass
 
 
-def test_get_instance_ids_from_ec2_intances():
+def test_ok_get_instance_ids_from_ec2_intances():
     pass
